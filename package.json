@@ -1,0 +1,26 @@
+{
+  "name": "zenslither",
+  "version": "1.0.0",
+  "description": "ZenSlither: A calm, meditative Slitherlink loop logic puzzle",
+  "main": "src/slither-engine.js",
+  "scripts": {
+    "test": "node --test test/engine.test.js",
+    "build": "node scripts/build.js"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/cli": "^6.2.0",
+    "@capacitor/core": "^6.2.0"
+  },
+  "keywords": [
+    "slitherlink",
+    "puzzle",
+    "logic",
+    "offline",
+    "casual",
+    "pwa",
+    "game"
+  ],
+  "author": "OfferPk",
+  "license": "MIT"
+}
