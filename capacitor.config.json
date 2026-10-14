@@ -1,0 +1,6 @@
+{
+  "appId": "pk.offer.zenslither",
+  "appName": "ZenSlither",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
