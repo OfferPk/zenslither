@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#143323"/>
+      <stop offset="55%" stop-color="#091b12"/>
+      <stop offset="100%" stop-color="#040b07"/>
+    </radialGradient>
+    <linearGradient id="goldLoop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="35%" stop-color="#fbbf24"/>
+      <stop offset="70%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="pinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7b7"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="loopGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+
+  <!-- Subtle Lattice Pin Grid Background -->
+  <g opacity="0.25">
+    <circle cx="106" cy="106" r="6" fill="#34d399"/>
+    <circle cx="206" cy="106" r="6" fill="#34d399"/>
+    <circle cx="306" cy="106" r="6" fill="#34d399"/>
+    <circle cx="406" cy="106" r="6" fill="#34d399"/>
+
+    <circle cx="106" cy="206" r="6" fill="#34d399"/>
+    <circle cx="206" cy="206" r="6" fill="#34d399"/>
+    <circle cx="306" cy="206" r="6" fill="#34d399"/>
+    <circle cx="406" cy="206" r="6" fill="#34d399"/>
+
+    <circle cx="106" cy="306" r="6" fill="#34d399"/>
+    <circle cx="206" cy="306" r="6" fill="#34d399"/>
+    <circle cx="306" cy="306" r="6" fill="#34d399"/>
+    <circle cx="406" cy="306" r="6" fill="#34d399"/>
+
+    <circle cx="106" cy="406" r="6" fill="#34d399"/>
+    <circle cx="206" cy="406" r="6" fill="#34d399"/>
+    <circle cx="306" cy="406" r="6" fill="#34d399"/>
+    <circle cx="406" cy="406" r="6" fill="#34d399"/>
+  </g>
+
+  <!-- Center Clue Number -->
+  <text x="256" y="266" font-family="-apple-system, Roboto, sans-serif" font-size="76" font-weight="900" fill="#a7f3d0" opacity="0.85" text-anchor="middle" dominant-baseline="central">3</text>
+
+  <!-- The Golden Loop Path -->
+  <path d="M 106 106 L 406 106 L 406 306 L 306 306 L 306 406 L 106 406 L 106 306 L 206 306 L 206 206 L 106 206 Z" 
+        fill="none" 
+        stroke="url(#goldLoop)" 
+        stroke-width="24" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        filter="url(#loopGlow)"/>
+
+  <!-- Active Glowing Lattice Pins -->
+  <circle cx="106" cy="106" r="14" fill="#fef08a" filter="url(#glow)"/>
+  <circle cx="406" cy="106" r="14" fill="#fef08a" filter="url(#glow)"/>
+  <circle cx="406" cy="306" r="14" fill="#fef08a" filter="url(#glow)"/>
+  <circle cx="306" cy="306" r="14" fill="#fef08a" filter="url(#glow)"/>
+  <circle cx="306" cy="406" r="14" fill="#fef08a" filter="url(#glow)"/>
+  <circle cx="106" cy="406" r="14" fill="#fef08a" filter="url(#glow)"/>
+  <circle cx="106" cy="306" r="14" fill="#fef08a" filter="url(#glow)"/>
+  <circle cx="206" cy="306" r="14" fill="#fef08a" filter="url(#glow)"/>
+  <circle cx="206" cy="206" r="14" fill="#fef08a" filter="url(#glow)"/>
+  <circle cx="106" cy="206" r="14" fill="#fef08a" filter="url(#glow)"/>
+
+  <!-- Golden Sparkles -->
+  <circle cx="360" cy="160" r="4" fill="#fef08a" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="150" cy="360" r="3" fill="#fef08a" opacity="0.75"/>
+  <circle cx="360" cy="360" r="3.5" fill="#fef08a" opacity="0.8"/>
+</svg>
