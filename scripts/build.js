@@ -25,12 +25,16 @@ const files = [
   'icon.svg'
 ];
 
+const rootDir = path.join(__dirname, '..');
+
 for (const file of files) {
   const srcPath = path.join(srcDir, file);
   const destPath = path.join(wwwDir, file);
+  const rootPath = path.join(rootDir, file);
   if (fs.existsSync(srcPath)) {
     fs.copyFileSync(srcPath, destPath);
-    console.log(`Copied ${file} -> www/`);
+    fs.copyFileSync(srcPath, rootPath);
+    console.log(`Copied ${file} -> www/ & root`);
   } else {
     console.warn(`Warning: ${file} not found in src/`);
   }
