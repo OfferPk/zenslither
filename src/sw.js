@@ -3,7 +3,7 @@
  * 100% Offline Cache First Strategy
  */
 
-const CACHE_NAME = 'zenslither-v1';
+const CACHE_NAME = 'zenslither-v2';
 const ASSETS = [
   './',
   './index.html',

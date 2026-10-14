@@ -33,6 +33,8 @@
   const modalVictory = document.getElementById('modal-victory');
   const btnNextVictory = document.getElementById('btn-next-victory');
   const boardSvg = document.getElementById('board-svg');
+  const gameMessageEl = document.getElementById('game-message');
+  const segmentCountEl = document.getElementById('segment-count');
 
   // Load progress from localStorage
   function loadProgress() {
@@ -73,6 +75,7 @@
 
   function updateSoundBtn() {
     btnSound.textContent = sounds.enabled ? '🔊' : '🔇';
+    btnSound.setAttribute('aria-pressed', String(sounds.enabled));
   }
 
   function updateAutoCrossBtn() {
@@ -81,6 +84,15 @@
     } else {
       btnAutoCross.classList.remove('active');
     }
+    btnAutoCross.setAttribute('aria-pressed', String(autoCross));
+  }
+
+  function updateBoardStats() {
+    const totalLines = engine ? engine.getTotalLines() : 0;
+    segmentCountEl.textContent = `${totalLines} ${totalLines === 1 ? 'segment' : 'segments'}`;
+    gameMessageEl.textContent = totalLines === 0
+      ? 'Choose an edge to begin your loop.'
+      : 'Your loop is taking shape.';
   }
 
   function loadLevel(index) {
@@ -276,6 +288,7 @@
         boardSvg.appendChild(pin);
       }
     }
+    updateBoardStats();
   }
 
   function handleEdgeInteraction(type, r, c) {
